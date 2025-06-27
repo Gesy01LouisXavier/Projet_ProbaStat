@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$gw3a1(ptvc(=2p*0ecbe4wsv%5t(--6$0twq29%s6+$a@*rd-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['probastatbackend-69c6deiv.b4a.run']
 
 
 # Application definition
