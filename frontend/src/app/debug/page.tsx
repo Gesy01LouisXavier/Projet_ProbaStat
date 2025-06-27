@@ -131,10 +131,10 @@ export default function DebugPage() {
       <div style={{ background: "#e7f3ff", padding: "1rem", borderRadius: "8px" }}>
         <h2>💡 Solutions</h2>
         <ul>
-          <li>Si l'URL est encore locale, modifiez la ligne 18 dans <code>src/lib/config.ts</code></li>
-          <li>Vérifiez que votre backend est accessible à l'URL configurée</li>
+          <li>Si l&apos;URL est encore locale, modifiez la ligne 18 dans <code>src/lib/config.ts</code></li>
+          <li>Vérifiez que votre backend est accessible à l&apos;URL configurée</li>
           <li>Assurez-vous que CORS est configuré sur votre backend</li>
-          <li>Redéployez après modification des variables d'environnement</li>
+          <li>Redéployez après modification des variables d&apos;environnement</li>
         </ul>
       </div>
     </div>
