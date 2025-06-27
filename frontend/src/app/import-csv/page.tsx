@@ -2,6 +2,7 @@
 import React, { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import styles from "../styles.module.css";
+import { apiUrls } from "../../lib/config";
 
 export default function ImportCSVPage() {
   const [file, setFile] = useState<File | null>(null);
@@ -39,7 +40,7 @@ export default function ImportCSVPage() {
     const formData = new FormData();
     formData.append("file", file);
     try {
-      const res = await fetch("http://127.0.0.1:3100/api/import-csv/", {
+      const res = await fetch(apiUrls.importCsv, {
         method: "POST",
         body: formData,
       });

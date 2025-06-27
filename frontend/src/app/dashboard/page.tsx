@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles.module.css";
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
+import { apiUrls } from "../../lib/config";
 
 const PIE_COLORS = ["#6366f1", "#38bdf8", "#f472b6", "#34d399"];
 
@@ -33,7 +34,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchReserves = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:3100/api/calcul-reserves/");
+        const res = await fetch(apiUrls.calculReserves);
         if (!res.ok) throw new Error("Erreur lors de la récupération des réserves");
         const data = await res.json();
         setReserves(data);
