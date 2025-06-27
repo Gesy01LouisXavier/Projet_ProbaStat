@@ -19,5 +19,5 @@ COPY . .
 # Exposer le port
 EXPOSE 3100
 
-# Commande de démarrage
-CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:3100"]
+# Commande de démarrage : appliquer les migrations puis lancer gunicorn
+CMD ["sh", "-c", "python manage.py migrate && gunicorn backend.wsgi:application --bind 0.0.0.0:3100"]
